@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "logo font";
+  src: url(/public/fonts/logo-font.otf);
+}
+
+.side-bar {
+  background-color: #1c1917;
+  color: white;
+  width: min(30%, 300px);
+  height: 100%;
+  overflow: scroll;
+}
+.side-bar > div:first-child {
+  font-family: "logo font";
+  margin-bottom: 70px;
+  font-size: 1.1rem;
+}
+.side-bar h2 {
+  margin-left: 20px;
+}
+.side-bar > div {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px auto;
+  transition: transform 0.2s ease-out;
+}
+.side-bar > div img {
+  width: 25px;
+  height: auto;
+}
+.side-bar > div:first-child img {
+  width: 60px;
+  height: auto;
+}
+.side-bar > div p {
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .side-bar {
+    width: 80px;
+  }
+  .side-bar p {
+    display: none;
+  }
+  .side-bar h2 {
+    display: none;
+  }
+  .side-bar img {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .side-bar > div:first-child img {
+    width: 100%;
+  }
+}
+
+.side-bar div:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

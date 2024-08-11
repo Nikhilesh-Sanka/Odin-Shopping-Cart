@@ -1,0 +1,61 @@
+.cart h2 {
+  margin: 20px;
+  text-align: center;
+}
+.cart .cart-product {
+  width: min(600px, 90%);
+  margin: 30px auto;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+  background-color: black;
+  color: white;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 10px;
+}
+.cart-product input {
+  width: 40px;
+  margin: 10px;
+}
+.cart-product img {
+  height: 100%;
+  width: auto;
+  grid-area: 1/1 / span 3 / span 1;
+}
+.cart-product img:hover {
+  cursor: pointer;
+}
+.cart-product button {
+  width: 150px;
+  height: 25px;
+  background-color: #be123c;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  place-self: center;
+}
+.cart > p {
+  text-align: center;
+}
+.cart > div {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cart > div:last-child > button {
+  height: 25px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+.cart > div:last-child > button:nth-child(1) {
+  justify-self: end;
+  margin: 20px;
+}
+.cart > div:last-child > button:nth-child(2) {
+  justify-self: start;
+  margin: 20px;
+}

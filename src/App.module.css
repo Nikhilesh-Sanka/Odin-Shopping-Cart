@@ -1,0 +1,18 @@
+.app > *:first-child {
+  position: fixed;
+  top: 0px;
+}
+.app > *:last-child {
+  width: 70%;
+  float: right;
+}
+@media (max-width: 600px) {
+  .app > *:last-child {
+    width: calc(100% - 80px);
+  }
+}
+@media (min-width: 1000px) {
+  .app > *:last-child {
+    width: calc(100% - 300px);
+  }
+}
