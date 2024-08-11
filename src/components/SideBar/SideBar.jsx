@@ -9,7 +9,7 @@ export function SideBar() {
   return (
     <div className={sideBarStyles["side-bar"]}>
       <div className={sideBarStyles["icon"]}>
-        <img src="/public/images/logo.jpg" />
+        <img src="/images/logo.jpg" />
         <h2>Code Shoppers</h2>
       </div>
       <div
@@ -17,7 +17,7 @@ export function SideBar() {
           navigateToPage("homepage");
         }}
       >
-        <img src="/public/images/home-icon.svg" />
+        <img src="/images/home-icon.svg" />
         <p>Home Page</p>
       </div>
       <div
@@ -25,7 +25,7 @@ export function SideBar() {
           navigateToPage("shop");
         }}
       >
-        <img src="/public/images/shop-icon.svg" />
+        <img src="/images/shop-icon.svg" />
         <p>Shop</p>
       </div>
       <div
@@ -33,7 +33,7 @@ export function SideBar() {
           navigateToPage("cart");
         }}
       >
-        <img src="/public/images/cart-icon.svg" />
+        <img src="/images/cart-icon.svg" />
         <p>Cart</p>
       </div>
     </div>
