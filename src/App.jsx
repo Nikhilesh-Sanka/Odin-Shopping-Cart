@@ -1,12 +1,13 @@
 import { SideBar } from "./components/SideBar/SideBar.jsx";
 import appStyles from "./App.module.css";
-import { Outlet, useParams } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export function App() {
   let [products, setProducts] = useState([]);
   let [cart, setCart] = useState([]);
   let [categoryBeingViewed, setCategoryBeingViewed] = useState("all");
+  let [productBeingViewed, setProductBeingViewed] = useState("");
   useEffect(() => {
     async function getProducts() {
       let fetchedData = await fetch("https://fakestoreapi.com/products");
@@ -34,6 +35,8 @@ export function App() {
             products: products,
             cart: cart,
             setCart: setCart,
+            productBeingViewed: productBeingViewed,
+            setProductBeingViewed: setProductBeingViewed,
           }}
         />
       </div>

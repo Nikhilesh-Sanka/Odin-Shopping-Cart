@@ -3,10 +3,11 @@ import { useParams, useOutletContext, useNavigate } from "react-router-dom";
 
 export function ProductPage() {
   let { productId } = useParams();
-  let { products, cart, setCart } = useOutletContext();
-  let navigate = useNavigate();
+  let { products, cart, setCart, productBeingViewed, setProductBeingViewed } =
+    useOutletContext();
+  let processedProductId = productId || productBeingViewed;
   let productInView = products.find(
-    (product) => product.id === parseInt(productId)
+    (product) => product.id === parseInt(processedProductId)
   );
   function addToCart(product) {
     if (cart.every((cartProduct) => cartProduct.id !== product.id)) {
@@ -21,7 +22,7 @@ export function ProductPage() {
         return cartProduct;
       });
       setCart(newCart);
-      navigate(`/product/${productId}`);
+      setProductBeingViewed(processedProductId);
     }
   }
   return (
